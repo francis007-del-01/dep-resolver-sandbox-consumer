@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId><artifactId>sandbox-consumer</artifactId><version>1.0.0-SNAPSHOT</version>
-  <properties><demo.version>1.0.1-SNAPSHOT</demo.version></properties>
+  <properties><demo.version>0.5.0</demo.version></properties>
   <dependencies><dependency><groupId>com.test</groupId><artifactId>demo-lib</artifactId><version>${demo.version}</version></dependency></dependencies>
   <fetchLatest><dependency><groupId>com.test</groupId><artifactId>demo-lib</artifactId></dependency></fetchLatest>
 </project>
