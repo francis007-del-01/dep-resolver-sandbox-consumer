@@ -24,6 +24,16 @@
         <version>2.1.0</version>                                                                                                                                
       </dependency>
 
+      <!-- in <dependencies> -->                                                                                                                                      
+  <dependency>                                                                                                                                                    
+    <groupId>com.test</groupId>                                                                                                                                 
+    <artifactId>demo-lib-v3</artifactId>                                                                                                                          
+    <version>0.5.0</version>                                                                                                                                    
+  </dependency>                                                                                                                                                   
+   
+ 
+
+
       <!-- Path 3: fetchRelease target NOT in Artifactory -->                                                                                                     
       <dependency>
         <groupId>com.sandbox</groupId>                                                                                                                            
@@ -41,6 +51,11 @@
                                                                                                                                                                 
     <fetchLatest>                                                                                                                                                 
       <dependency><groupId>com.test</groupId><artifactId>demo-lib-v2</artifactId></dependency>
+       <!-- in <fetchLatest> -->                                                                                                                                       
+  <dependency>                                                                                                                                                  
+    <groupId>com.test</groupId>                                                                                                                                 
+    <artifactId>demo-lib-v3</artifactId>                                                                                                                          
+  </dependency>
     </fetchLatest>                                                                                                                                                
                                                                                                                                                                 
     <fetchRelease>                                                                                                                                              
