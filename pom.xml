@@ -3,6 +3,46 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId><artifactId>sandbox-consumer</artifactId><version>1.0.0-SNAPSHOT</version>
   <properties><demo.version>1.0.0</demo.version></properties>
-  <dependencies><dependency><groupId>com.test</groupId><artifactId>demo-lib</artifactId><version>${demo.version}</version></dependency></dependencies>
-  <fetchRelease><dependency><groupId>com.test</groupId><artifactId>demo-lib</artifactId></dependency></fetchRelease>
+ <dependencies>                                                                                                                                                
+    <!-- Existing deps stay -->                                                                                                                                 
+                                                                                                                                                                  
+    <!-- Path 1: outdated fetchRelease target -->
+    <dependency>                                                                                                                                                  
+      <groupId>com.test</groupId>                                                                                                                               
+      <artifactId>demo-lib</artifactId>                                                                                                                         
+      <version>0.9.0</version>   <!-- older than mock's 1.0.0 -->                                                                                                 
+    </dependency>                                                                                                                                                 
+                                                                                                                                                                  
+    <!-- Path 2: up-to-date fetchRelease target -->                                                                                                               
+    <dependency>                                                                                                                                                
+      <groupId>com.test</groupId>                                                                                                                                 
+      <artifactId>util-lib</artifactId>
+      <version>2.1.0</version>   <!-- same as mock's 2.1.0 -->                                                                                                    
+    </dependency>                                                                                                                                                 
+                                                                                                                                                                
+    <!-- Path 3: fetchRelease target NOT in Artifactory -->                                                                                                       
+    <dependency>                                                                                                                                                
+      <groupId>com.sandbox</groupId>                                                                                                                              
+      <artifactId>missing-lib</artifactId>                                                                                                                      
+      <version>1.0.0</version>                                                                                                                                    
+    </dependency>
+                                                                                                                                                                  
+    <!-- Path 4: fetchLatest target with same-SHA shortcut (will need mock jars with matching git.properties) -->                                                 
+    <dependency>                                                                                                                                                
+      <groupId>com.test</groupId>                                                                                                                                 
+      <artifactId>demo-lib-v2</artifactId>                                                                                                                      
+      <version>0.5.0</version>                                                                                                                                    
+    </dependency>
+  </dependencies>                                                                                                                                                 
+                                                                                                                                                                
+  <fetchLatest>                                                                                                                                                 
+    <dependency><groupId>com.test</groupId><artifactId>demo-lib-v2</artifactId></dependency>
+  </fetchLatest>                                                                                                                                                  
+   
+  <fetchRelease>                                                                                                                                                  
+    <dependency><groupId>com.test</groupId><artifactId>demo-lib</artifactId></dependency>                                                                       
+    <dependency><groupId>com.test</groupId><artifactId>util-lib</artifactId></dependency>                                                                         
+    <dependency><groupId>com.sandbox</groupId><artifactId>missing-lib</artifactId></dependency>                                                                   
+  </fetchRelease>
+  
 </project>
