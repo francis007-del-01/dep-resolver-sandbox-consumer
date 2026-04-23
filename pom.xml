@@ -10,7 +10,7 @@
     <dependency>                                                                                                                                                  
       <groupId>com.test</groupId>                                                                                                                               
       <artifactId>demo-lib</artifactId>                                                                                                                         
-      <version>0.9.0</version>   <!-- older than mock's 1.0.0 -->                                                                                                 
+      <version>1.0.0</version>   <!-- older than mock's 1.0.0 -->                                                                                                 
     </dependency>                                                                                                                                                 
                                                                                                                                                                   
     <!-- Path 2: up-to-date fetchRelease target -->                                                                                                               
