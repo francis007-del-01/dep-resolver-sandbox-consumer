@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId><artifactId>sandbox-consumer</artifactId><version>1.0.0-SNAPSHOT</version>
-  <properties><demo.version>1.0.0</demo.version></properties>
+  <properties><demo.version>0.9.0</demo.version></properties>
  <dependencies>                                                                                                                                                
     <!-- Existing deps stay -->                                                                                                                                 
                                                                                                                                                                   
@@ -10,7 +10,7 @@
     <dependency>                                                                                                                                                  
       <groupId>com.test</groupId>                                                                                                                               
       <artifactId>demo-lib</artifactId>                                                                                                                         
-      <version>1.0.0</version>   <!-- older than mock's 1.0.0 -->                                                                                                 
+      <version>${demo.version}</version>   <!-- older than mock's 1.0.0 -->                                                                                                 
     </dependency>                                                                                                                                                 
                                                                                                                                                                   
     <!-- Path 2: up-to-date fetchRelease target -->                                                                                                               
